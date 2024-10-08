@@ -1,66 +1,102 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Freelance Hours
+Este projeto foi desenvolvido como parte do curso gratuito de PHP oferecido pela Rocketseat, que abrange uma série de tópicos fundamentais para o desenvolvimento web com PHP. Durante o curso, foram explorados conceitos essenciais do PHP, além de ferramentas e frameworks complementares que facilitam o desenvolvimento moderno de aplicações.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+No curso, aprendemos a trabalhar com:
 
-## About Laravel
+- **PHP**: A linguagem de programação back-end, onde estudamos seus fundamentos e melhores práticas.
+- **Blade**: O motor de templates do Laravel, que permite criar layouts dinâmicos e reutilizáveis de maneira simples e eficiente.
+- **Livewire**: Um framework que permite criar componentes dinâmicos em tempo real sem sair do ecossistema do Laravel, facilitando a criação de interfaces interativas sem a necessidade de JavaScript.
+- **Artisan**: A interface de linha de comando (CLI) do Laravel, que auxilia na criação de recursos, execução de tarefas e gerenciamento da aplicação.
+- **Herd**: Uma ferramenta moderna para gerenciar ambientes de desenvolvimento PHP localmente.
+- **Composer**: O gerenciador de dependências PHP, utilizado para integrar pacotes e bibliotecas externas ao projeto.
+- **Node.js**: Uma plataforma que permite o uso de JavaScript no back-end e no front-end, frequentemente utilizada para gerenciar pacotes como o NPM.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Este projeto reúne as práticas e conceitos aplicados ao longo do curso, demonstrando a integração entre todas essas ferramentas e tecnologias.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Comandos Terminal
+### Iniciando Projeto Laravel
+Para acessar a documentação do Laravel [clique aqui](https://laravel.com/docs/11.x/readme).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Se quiser saber as informações de um comando:
+    ```bash
+    php artisan | grep comando (Linux)
+    php artisan | Select-String livewire (Windows)
 
-## Learning Laravel
+- Para iniciar a criação do projeto laravel: Crie uma pasta para seu projeto e dentro dela no terminal execute o comando:
+    ```bash
+    laravel new
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Após isso adicione o nome do projeto e utilize o "stater kit" desejado(no caso do projeto em questão foi "No starter kit").
+  
+- Selecione a parte de teste(Pest).
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- Se quiser inicializar com Git.
+    ```bash
+    yes
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Escolha o banco de dados desejedo.
+    ```bash
+    Sqlite
 
-## Laravel Sponsors
+- Comando responsável por iniciar aplicação Php:
+    ```bash
+    php artisan serve
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Erro Failed to Listen
+- Acesse a pasta:
+    ```bash
+    C:\Users\username\.config\herd\bin\php83
 
-### Premium Partners
+- Dentro dessa pasta estarão as versões do PHP que você instalou. Clica dentro dessa pasta e encontra o arquivo php.ini, abra ele com algum editor de texto e altera de:
+    ```bash
+    variables_order = "EGPCS"
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+- Para:
+    ```bash    
+    variables_order = "GPCS"
+ 
+- **Para auxiliar a localização o trecho se encontra abaixo da linha:**
+    ```bash    
+    ; https://php.net/variables-order
+    variables_order = "EGPCS"
 
-## Contributing
+- Fecha, reinicia o terminal e tenta rodar de novo!
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Controllers
+- Para criar a controller:    
+    ```bash
+    php artisan make:controller
 
-## Code of Conduct
+### Models
+- Para verificar as informações de uma model como por exemplo User:
+    ```bash
+    php artisan model:show User
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Livewire
+Para saber mais sobre sua documentação [acesse aqui](https://laravel-livewire.com/docs/2.x/installation).
 
-## Security Vulnerabilities
+- para instalar o Livewire insira no terminal:
+    ```bash
+    composer require livewire/livewire
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Para criar um novo layout:
+    ```bash
+    php artisan livewire:layout
 
-## License
+- Agora para criar um novo component:
+    ```bash
+    php artisan livewire:make nomeDoComponent
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Node.js
+- Para instalar todas as dependências listadas no arquivo package.json do projeto:
+    ```bash    
+    npm install
+
+- Para executar um script de build que está definido no arquivo package.json: 
+    ```bash    
+    npm run build
+<br>
+Comumente usado em projetos front-end para compilar e otimizar o código fonte, preparando-o para a produção.
+<br>
+
+    
