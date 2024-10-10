@@ -236,6 +236,6 @@ Para este projeto é necessário ter o [Herd](https://herd.laravel.com/windows) 
     ```bash
     npm run dev
 
-- 6. Cole o hiperlink **http://127.0.0.1:8000**(sera informado no terminal da etapa **4**, "CTRL + Click esquerdo do mouse" abrirá direto) e pressione "ENTER".
+- 6. Cole o hiperlink [LocalHost](http://127.0.0.1:8000) (sera informado no terminal da etapa **4**, "CTRL + Click esquerdo do mouse" abrirá direto) e pressione "ENTER".
 
 - 7 (Opcional) Caso queira consultar os logs do Laravel, crie um novo terminal e deixe rodando:
