@@ -12,6 +12,8 @@ No curso, aprendemos a trabalhar com:
 - **Node.js**: Uma plataforma que permite o uso de JavaScript no back-end e no front-end, frequentemente utilizada para gerenciar pacotes como o NPM.
 
 Este projeto reúne as práticas e conceitos aplicados ao longo do curso, demonstrando a integração entre todas essas ferramentas e tecnologias.
+<br><br>
+![tabela inicial](/imgs-readme/telaInicial.png)
 
 ## Comandos Terminal
 ### Iniciando Projeto Laravel
@@ -41,6 +43,23 @@ Para acessar a documentação do Laravel [clique aqui](https://laravel.com/docs/
 - Comando responsável por iniciar aplicação Php:
     ```bash
     php artisan serve
+
+### Mais comandos Laravel
+- O comando php a seguir remove todas as tabelas do banco de dados e recria-as do zero. Ele é útil quando você quer fazer uma limpeza completa e garantir que todas as migrações sejam executadas em um banco vazio.
+    ```bash
+    php artisan migrate:fresh
+
+- O comando a seguir é utilizado para popular o banco de dados com dados de teste ou iniciais, que são definidos nos seeders(database/seeders/DatabaseSeeder.php). Esse comando executa as classes de seeding que você criou, permitindo preencher suas tabelas com dados automaticamente.
+    ```bash
+    php artisan db:seed
+
+- Caso queira rodar os dois comandos anteriores de uma só vez:
+    ```bash
+    php artisan migrate:fresh --seed
+
+- Caso queira criar um enum(backed enum String):
+    ```bash
+    php artisan make:enum
 
 ### Erro Failed to Listen
 - Acesse a pasta:
@@ -72,8 +91,20 @@ Para acessar a documentação do Laravel [clique aqui](https://laravel.com/docs/
     ```bash
     php artisan model:show User
 
-## Livewire
-Para saber mais sobre sua documentação [acesse aqui](https://laravel-livewire.com/docs/2.x/installation).
+- Para criar uma nova model:
+    ```bash
+    php artisan make:model
+
+1. Escolha o nome
+2. Escolha as opções desejadas(se for mais de uma separe por ",")
+
+### View   
+- Para criar uma pasta nova com um programa blade.php mais rapidamente como por exemplo(projects/index.blade.php):
+    ```bash
+    php artisan make:view projects.index
+
+### Livewire
+Permite a construção de interfaces dinâmicas sem a necessidade de escrever JavaScript diretamente, usando componentes que interagem com o servidor em tempo real. Para saber mais sobre sua documentação [acesse aqui](https://laravel-livewire.com/docs/2.x/installation).
 
 - para instalar o Livewire insira no terminal:
     ```bash
@@ -87,7 +118,7 @@ Para saber mais sobre sua documentação [acesse aqui](https://laravel-livewire.
     ```bash
     php artisan livewire:make nomeDoComponent
 
-## Node.js
+### Node.js
 - Para instalar todas as dependências listadas no arquivo package.json do projeto:
     ```bash    
     npm install
@@ -97,6 +128,20 @@ Para saber mais sobre sua documentação [acesse aqui](https://laravel-livewire.
     npm run build
 <br>
 Comumente usado em projetos front-end para compilar e otimizar o código fonte, preparando-o para a produção.
-<br>
+
+### Tailwind CSS com Laravel
+- Para fazer a instalação do tailwind no projeto:
+    ```bash    
+    npm install -D tailwindcss postcss autoprefixer
+    npx tailwindcss init -p
+
+- Para deixar o tailwind rodando(abra um terminal novo e deixe-o aberto):
+    ```bash    
+    npm run dev
+
+## dbdiagram.io
+Para o planejamento inicial do banco de dados, utilizamos o dbdiagram.io, uma ferramenta online para criar diagramas de entidade-relacionamento (ERD). Ela nos permitiu definir a estrutura do banco de dados de maneira simples e visual, facilitando a criação das tabelas e suas relações.
+<br><br>
+![tabela inicial](/imgs-readme/dbdiagram.png)
 
     
